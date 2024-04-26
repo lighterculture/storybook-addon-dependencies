@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "incremental": false,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["es2020", "dom"],
+    "noImplicitAny": false,
+    "rootDir": "./src",
+    "skipLibCheck": true
+  },
+  "include": [
+    "**/src/*.ts",
+    "**/src/*.tsx",
+    "src/buildTree.cts",
+    "src/tree/SaplingTree.ts",
+    "src/tree/SaplingParser.mts"
+  ]
+}

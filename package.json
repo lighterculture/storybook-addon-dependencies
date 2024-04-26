@@ -1,0 +1,73 @@
+{
+  "name": "storybook-addon-dependencies",
+  "version": "0.0.0",
+  "description": "Display an interactive dependencies table on autodocs page.",
+  "keywords": [
+    "autodocs",
+    "dependencies",
+    "dependants",
+    "blocks",
+    "docs",
+    "developer",
+    "storybook-addons"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Saandrader/storybook-addon-dependencies"
+  },
+  "type": "module",
+  "license": "MIT",
+  "author": "saandrader <samuelandraderive@gmail.com>",
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "tree": "node ./dist/buildTree.cjs",
+    "build": "rm -rf dist/ && tsc",
+    "build:watch": "tsc -w",
+    "start": "rm -rf dist/ && run-p build:watch storybook",
+    "release": "npm run build && auto shipit",
+    "storybook": "storybook dev -c ./example/.storybook -p 6006",
+    "build-storybook": "storybook build -c ./example/.storybook"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.24.0",
+    "@storybook/addon-essentials": "^8.0.9",
+    "@storybook/blocks": "^8.0.9",
+    "@storybook/components": "^8.0.9",
+    "@storybook/icons": "^1.2.9",
+    "@storybook/manager-api": "^8.0.9",
+    "@storybook/react": "^8.0.9",
+    "@storybook/react-vite": "^8.0.9",
+    "@storybook/types": "^8.0.9",
+    "@types/node": "^18.15.0",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.0.9",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "storybook": {
+    "displayName": "Authors",
+    "supportedFrameworks": [
+      "react"
+    ],
+    "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+  },
+  "peerDependencies": {
+    "@storybook/addon-docs": "^8.0.9",
+    "@storybook/addon-links": "^8.0.9",
+    "@babel/parser": "^7.24.4",
+    "@babel/traverse": "^7.24.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "glob": "^10.3.12"
+  }
+}
