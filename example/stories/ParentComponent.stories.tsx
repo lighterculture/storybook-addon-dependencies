@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ParentComponent } from "./ParentComponent.tsx";
+import { ParentComponent } from "./ParentComponent";
 import { themes } from "@storybook/theming";
 
 const meta: Meta<typeof ParentComponent> = {

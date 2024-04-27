@@ -1,7 +1,17 @@
-const tree = /* BUILD_TREE_SCRIPT_START */ {"Parent Component":{"dependencies":["Component 1","Component 2","Component 3"],"dependents":[]},"Component 1":{"dependencies":[],"dependents":["Parent Component"]},"Component 2":{"dependencies":["Component 3"],"dependents":["Parent Component"]},"Component 3":{"dependencies":["Component 7"],"dependents":["Parent Component","Component 2"]},"Component 7":{"dependencies":[],"dependents":["Component 3"]}}; /* BUILD_TREE_SCRIPT_END */                              
+const tree = /* BUILD_TREE_SCRIPT_START */ {"Badge":{"dependencies":[],"dependents":["Sidebar"]},"Document Preview":{"dependencies":[],"dependents":[]},"Button Icon":{"dependencies":["Button"],"dependents":["Accordion"]},"Button":{"dependencies":[],"dependents":["Button Icon"]},"Header":{"dependencies":[],"dependents":[]},"Column Bar Chart":{"dependencies":[],"dependents":[]},"Search Input":{"dependencies":[],"dependents":["Table Search"]},"Divider":{"dependencies":[],"dependents":["Sidebar"]},"Table Search":{"dependencies":["Search Input"],"dependents":[]},"Accordion":{"dependencies":["Button Icon"],"dependents":["Sidebar"]},"Icon Card":{"dependencies":[],"dependents":[]},"Sidebar":{"dependencies":["Divider","Badge","Accordion"],"dependents":[]}}; /* BUILD_TREE_SCRIPT_END */ 
 export const getDependenciesTree = (storyTitle) => {
-    return tree[storyTitle].dependencies;
+    try {
+        return tree[storyTitle].dependencies;
+    }
+    catch {
+        return [];
+    }
 };
 export const getDependentsTree = (storyTitle) => {
-    return tree[storyTitle].dependents;
+    try {
+        return tree[storyTitle].dependents;
+    }
+    catch {
+        return [];
+    }
 };

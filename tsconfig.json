@@ -19,7 +19,9 @@
     "**/src/*.ts",
     "**/src/*.tsx",
     "src/buildTree.cts",
+    "src/utils/buildTreeUtils.cts",
     "src/tree/SaplingTree.ts",
-    "src/tree/SaplingParser.mts"
+    "src/tree/SaplingParser.mts",
+    "src/components/index.ts"
   ]
 }

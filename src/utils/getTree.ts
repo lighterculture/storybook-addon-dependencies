@@ -1,9 +1,21 @@
-const tree = /* BUILD_TREE_SCRIPT_START */ []; /* BUILD_TREE_SCRIPT_END */
+const tree = /* BUILD_TREE_SCRIPT_START */ {}; /* BUILD_TREE_SCRIPT_END */
 
 export const getDependenciesTree = (storyTitle) => {
-  return tree[storyTitle].dependencies;
+  try {
+    return tree[storyTitle].dependencies;
+  } catch {
+    return [];
+  }
 };
 
 export const getDependentsTree = (storyTitle) => {
-  return tree[storyTitle].dependents;
+  try {
+    return tree[storyTitle].dependents;
+  } catch {
+    return [];
+  }
+};
+
+export const getTree = () => {
+  return tree;
 };
