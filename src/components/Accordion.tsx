@@ -5,29 +5,45 @@ import { ChevronRightIcon } from "@storybook/icons";
 import { linkTo } from "@storybook/addon-links";
 import { getDependenciesTree, getDependentsTree } from "../utils/getTree.js";
 
-let getTree = getDependenciesTree;
-
 export const Accordion = ({ depList, treeMode }) => {
-  getTree = treeMode ? getDependenciesTree : getDependentsTree;
   return (
     <Table>
-      <RecursiveRendering depList={depList} />
+      {treeMode ? <RecursiveDependencies depList={depList} /> : <RecursiveDependents depList={depList} />}
     </Table>
   );
 };
 
-const RecursiveRendering = ({ depList }) => {
+const RecursiveDependencies = ({ depList }) => {
   return depList.map((depTitle: any) => {
-    const dep = getTree(depTitle);
+    const dep = getDependenciesTree(depTitle);
     if (dep.length === 0) {
       return <Row name={depTitle} key={depTitle} />;
     } else {
-      return <ContainerRow name={depTitle} depList={dep} key={depTitle} />;
+      return (
+        <ContainerRow name={depTitle} key={depTitle}>
+          <RecursiveDependencies depList={dep} />
+        </ContainerRow>
+      );
     }
   });
 };
 
-const ContainerRow = ({ name, depList }) => {
+const RecursiveDependents = ({ depList }) => {
+  return depList.map((depTitle: any) => {
+    const dep = getDependentsTree(depTitle);
+    if (dep.length === 0) {
+      return <Row name={depTitle} key={depTitle} />;
+    } else {
+      return (
+        <ContainerRow name={depTitle} key={depTitle}>
+          <RecursiveDependents depList={dep} />
+        </ContainerRow>
+      );
+    }
+  });
+};
+
+const ContainerRow = ({ name, children }) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -42,9 +58,7 @@ const ContainerRow = ({ name, depList }) => {
       </RowDiv>
 
       <RowsContainer $isOpen={open}>
-        <div style={{ overflow: "hidden" }}>
-          <RecursiveRendering depList={depList} />
-        </div>
+        <div style={{ overflow: "hidden" }}>{children}</div>
       </RowsContainer>
     </>
   );

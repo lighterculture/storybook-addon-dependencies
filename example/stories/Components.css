@@ -1,0 +1,26 @@
+.component-addon-dep {
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+  overflow: hidden;
+  justify-content: center;
+  font-family:
+    "Nunito Sans",
+    -apple-system,
+    ".SFNSText-Regular",
+    "San Francisco",
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+.component-addon-dep > div {
+  display: flex;
+  gap: 10px;
+}

@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ParentComponent } from "./ParentComponent";
-import { themes } from "@storybook/theming";
+// import { themes } from "@storybook/theming";
 
 const meta: Meta<typeof ParentComponent> = {
   title: "Parent Component",
-  parameters: {
-    docs: {
-      theme: themes.dark,
-    },
-  },
+  // parameters: {
+  //   docs: {
+  //     theme: themes.dark,
+  //   },
+  // },
   tags: ["autodocs"],
   component: ParentComponent,
 };

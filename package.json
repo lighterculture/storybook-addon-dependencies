@@ -1,19 +1,20 @@
 {
   "name": "storybook-addon-dependencies",
   "version": "8.0.0",
-  "description": "Display an interactive dependencies table on autodocs page.",
+  "description": "Browse across stories with interactive dependency tree on autodocs page.",
   "keywords": [
-    "autodocs",
-    "dependencies",
-    "dependants",
-    "blocks",
     "docs",
-    "developer",
-    "storybook-addons"
+    "dependencies",
+    "react",
+    "blocks",
+    "popular",
+    "organize",
+    "storybook-addon",
+    "storybook"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Saandrader/storybook-addon-dependencies"
+    "url": "https://github.com/aandrader/storybook-addon-dependencies"
   },
   "type": "module",
   "license": "MIT",
@@ -21,7 +22,8 @@
   "exports": {
     ".": "./dist/preset.js",
     "./blocks": "./dist/components/index.js",
-    "./api": "./dist/utils/getTree.js"
+    "./api": "./dist/utils/getTree.js",
+    "./hooks": "./dist/hooks/useCurrentStoryTitle.js"
   },
   "files": [
     "dist/**/*",
@@ -33,12 +35,11 @@
     "build": "rm -rf dist/ && tsc",
     "build:watch": "tsc -w",
     "start": "rm -rf dist/ && run-p build:watch storybook",
-    "release": "npm run build && auto shipit",
     "storybook": "storybook dev -c ./example/.storybook -p 6006",
     "build-storybook": "storybook build -c ./example/.storybook"
   },
   "devDependencies": {
-    "@babel/types": "^7.24.0",
+    "@babel/types": "^7.0.0",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/blocks": "^8.0.0",
     "@storybook/components": "^8.0.0",
@@ -47,12 +48,10 @@
     "@storybook/react": "^8.0.0",
     "@storybook/react-vite": "^8.0.0",
     "@storybook/types": "^8.0.0",
-    "@types/node": "^18.15.0",
-    "@types/react": "^18.2.65",
-    "@types/react-dom": "^18.2.21",
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^4.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "storybook": "^8.0.0",
     "typescript": "^5.4.2",
     "vite": "^5.1.6"
@@ -61,19 +60,19 @@
     "access": "public"
   },
   "storybook": {
-    "displayName": "Authors",
+    "displayName": "Component dependency tree",
     "supportedFrameworks": [
       "react"
     ],
-    "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+    "icon": "https://raw.githubusercontent.com/aandrader/media/main/storybook-addon-dependencies-logo.png"
   },
   "peerDependencies": {
+    "@babel/parser": "^7.24.4",
+    "@babel/traverse": "^7.0.0",
     "@storybook/addon-docs": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",
-    "@babel/traverse": "7.24.1",
-    "@babel/parser": "^7.24.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "glob": "^10.3.12"
+    "glob": "^9.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }

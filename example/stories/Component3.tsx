@@ -1,12 +1,12 @@
 import React from "react";
-import { Component4 } from "./Component4";
+import { NoStoryComponent } from "./NoStoryComponent";
 
 export const Component3 = () => {
   return (
-    <div>
+    <div className="component-addon-dep" style={{ background: "#b5e48c" }}>
       Component3
       <div>
-        <Component4 />
+        <NoStoryComponent />
       </div>
     </div>
   );

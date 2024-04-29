@@ -1,13 +1,9 @@
 import React from "react";
-import { Component7 } from "./Component7";
 
 export const Component4 = () => {
   return (
-    <div>
+    <div className="component-addon-dep" style={{ background: "#d9ed92" }}>
       Component4
-      <div>
-        <Component7 />
-      </div>
     </div>
   );
 };
