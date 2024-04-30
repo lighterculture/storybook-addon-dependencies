@@ -9,10 +9,12 @@ This addon adds interactive dependencies trees to the autodocs page.
 
 ### Getting started
 
+To use it with storybook 7 install `npm i -D storybook-addon-dependencies@7.0.0`
+
 1. Install
 
 ```bash
-npm install -D storybook-addon-dependencies
+npm i -D storybook-addon-dependencies
 yarn add -D storybook-addon-dependencies
 ```
 
@@ -25,6 +27,8 @@ export default {
 ```
 
 3. Build the dependency tree
+
+4. Run storybook
 
 ### Development scripts
 

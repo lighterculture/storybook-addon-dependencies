@@ -1,9 +1,10 @@
 {
   "name": "storybook-addon-dependencies",
-  "version": "8.0.0",
-  "description": "Browse across stories with interactive dependency tree on autodocs page.",
+  "version": "8.0.2",
+  "description": "Browse across stories with an interactive dependency tree on autodocs page.",
   "keywords": [
     "docs",
+    "tree",
     "dependencies",
     "react",
     "blocks",

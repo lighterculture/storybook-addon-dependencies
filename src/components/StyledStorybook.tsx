@@ -15,7 +15,6 @@ export const Table: typeof Div = styled(Div)(({ theme }) => ({
   position: "relative",
   overflow: "hidden",
   margin: "16px 0 40px",
-  // padding: "5px 10px",
   ...getBlockBackgroundStyle(theme),
 }));
 
