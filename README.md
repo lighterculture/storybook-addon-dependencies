@@ -9,6 +9,7 @@ This addon adds interactive dependencies trees to the autodocs page.
 
 ### Getting started
 
+This addon supports v7 and v8.
 To use it with storybook 7 install `npm i -D storybook-addon-dependencies@7.0.0`
 
 1. Install
