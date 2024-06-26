@@ -50,8 +50,8 @@
     "@storybook/react-vite": "^8.0.0",
     "@storybook/types": "^8.0.0",
     "@types/node": "^18.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
+    "@types/react": "^16.0.0",
+    "@types/react-dom": "^16.0.0",
     "@vitejs/plugin-react": "^4.2.1",
     "storybook": "^8.0.0",
     "typescript": "^5.4.2",
@@ -73,7 +73,7 @@
     "@storybook/addon-docs": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",
     "glob": "^9.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   }
 }
